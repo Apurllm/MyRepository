@@ -16,6 +16,15 @@ public class Linkman {
 	 */
 	private Long lkm_id;
 	private String lkm_name;
+	@Override
+	public String toString() {
+		return "Linkman [lkm_id=" + lkm_id + ", lkm_name=" + lkm_name
+				+ ", lkm_cust_id=" + lkm_cust_id + ", lkm_gender=" + lkm_gender
+				+ ", lkm_phone=" + lkm_phone + ", lkm_mobile=" + lkm_mobile
+				+ ", lkm_email=" + lkm_email + ", lkm_qq=" + lkm_qq
+				+ ", lkm_position=" + lkm_position + ", lkm_memo=" + lkm_memo
+				+ ", customer=" + customer + "]";
+	}
 	private Long lkm_cust_id;
 	private String lkm_gender;
 	private String lkm_phone;

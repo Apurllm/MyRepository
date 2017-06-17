@@ -1,7 +1,5 @@
 package com.itheima.web.action;
 
-import static org.hamcrest.CoreMatchers.nullValue;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -10,12 +8,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.struts2.ServletActionContext;
-import org.apache.struts2.interceptor.FileUploadInterceptor;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
 
 import com.itheima.domain.Customer;
 import com.itheima.domain.Dict;
+import com.itheima.domain.Linkman;
 import com.itheima.domain.PageBean;
 import com.itheima.service.CustomerService;
 import com.itheima.utils.FastJsonUtil;
@@ -206,9 +204,11 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
 			//将新的路径到设置到customer中
 			customer.setFilePath(newFilePath+"\\"+uuidName);
 		}
-		System.out.println(customer.getCust_id());
-		customerService.update(customer);
-		return "update";
+		Linkman linkman = customerService.update(customer);
+		if(linkman == null){
+			return "update";
+		}
+		return "error";
 	}
 	
 	/**

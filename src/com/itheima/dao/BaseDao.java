@@ -18,7 +18,7 @@ public interface BaseDao<T> {
 	public PageBean<T> findByPage(Integer pageCode, Integer pageSize, DetachedCriteria criteria);
 	public T findById(Long id);
 	public void delete(T t);
-	public void update(T t);
+	public void update1(T t);
 	public List<T> findAll();
 	
 }

@@ -37,6 +37,7 @@
 			<result name="delete" type="redirectAction">customer_findByPage.action</result>
 			<result name="initUpdate">/jsp/customer/edit.jsp</result>
 			<result name="update" type="redirectAction">customer_findByPage.action</result>
+			<result name="error" >/jsp/error.jsp</result>
 			
 			<!-- 引入默认的拦截器 -->
 			<interceptor-ref name="userInterceptor"></interceptor-ref>

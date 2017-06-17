@@ -5,6 +5,7 @@ import java.util.List;
 import org.hibernate.criterion.DetachedCriteria;
 
 import com.itheima.domain.Customer;
+import com.itheima.domain.Linkman;
 import com.itheima.domain.PageBean;
 
 public interface CustomerService {
@@ -18,7 +19,7 @@ public interface CustomerService {
 
 	public void delete(Customer customer);
 
-	public void update(Customer customer);
+	public Linkman update(Customer customer);
 
 	public List<Customer> findAll();
 }

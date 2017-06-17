@@ -50,7 +50,7 @@ public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
 		/**
 		 * 修改
 		 */
-		public void update(T t) {
+		public void update1(T t) {
 			this.getHibernateTemplate().update(t);
 		}
 		

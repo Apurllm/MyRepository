@@ -7,6 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.itheima.dao.CustomerDao;
 import com.itheima.domain.Customer;
+import com.itheima.domain.Linkman;
 import com.itheima.domain.PageBean;
 
 @Transactional
@@ -49,8 +50,8 @@ public class CustomerServiceImpl implements CustomerService{
 	/**
 	 * 更新客户信息
 	 */
-	public void update(Customer customer) {
-		customerDao.update(customer);
+	public Linkman update(Customer customer) {
+		return customerDao.update(customer);
 	}
 
 	/**

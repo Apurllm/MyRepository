@@ -1,15 +1,27 @@
 package com.itheima.dao;
 
+import static org.hamcrest.CoreMatchers.nullValue;
+
 import java.util.List;
 
-import org.hibernate.criterion.DetachedCriteria;
-import org.hibernate.criterion.Projections;
-import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
+import jdk.nashorn.internal.objects.annotations.Where;
 
 import com.itheima.domain.Customer;
-import com.itheima.domain.PageBean;
+import com.itheima.domain.Linkman;
 
 public class CustomerDaoImpl extends BaseDaoImpl<Customer> implements CustomerDao {
+
+	/**
+	 * 更新客户
+	 * 
+	 */
+	public Linkman update(Customer customer) {
+		List<Linkman> list = (List<Linkman>) this.getHibernateTemplate().find("from Linkman where lkm_cust_id=?", customer.getCust_id());
+		if(list != null && list.size() > 0){
+			return list.get(0);
+		}
+		return null;
+	}
 
 //	public void save(Customer customer) {
 //		this.getHibernateTemplate().save(customer);

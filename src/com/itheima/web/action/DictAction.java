@@ -37,7 +37,7 @@ public class DictAction extends ActionSupport implements ModelDriven<Dict>{
 	public String findByCode(){
 		List<Dict> list = dictService.findByCode(dict.getDict_type_code());
 		String jsonString = FastJsonUtil.toJSONString(list);
-		System.out.println("action:"+jsonString);
+//		System.out.println("action:"+jsonString);
 		//将json串写到浏览器端
 		HttpServletResponse response = ServletActionContext.getResponse();
 		FastJsonUtil.write_json(response, jsonString);
