@@ -24,19 +24,19 @@
 		<property name="filePath" column="filePath"></property>
 		
 		<!-- name:多方中JavaBean的属性名   class:一方类全路径   column:外键名称 -->
-		<many-to-one name="source" class="com.itheima.domain.Dict" column="cust_source" />
-		<many-to-one name="industry" class="com.itheima.domain.Dict" column="cust_industry"/>
-		<many-to-one name="level" class="com.itheima.domain.Dict" column="cust_level"/>
+<!-- 		<many-to-one name="source" class="com.itheima.domain.Dict" column="cust_source" /> -->
+<!-- 		<many-to-one name="industry" class="com.itheima.domain.Dict" column="cust_industry"/> -->
+<!-- 		<many-to-one name="level" class="com.itheima.domain.Dict" column="cust_level"/> -->
 		
 		<!--
 			 配置与Linkman的关联关系 
 			inverse="true"  一方放弃对外键的维护
 			让客户放弃外键的维护权利
 		-->
-		<set name="linkmans" inverse="true">
-			<key column="lkm_cust_id"/>
-			<one-to-many class="com.itheima.domain.Linkman"/>
-		</set>
+<!-- 		<set name="linkmans" inverse="true"> -->
+<!-- 			<key column="lkm_cust_id"/> -->
+<!-- 			<one-to-many class="com.itheima.domain.Linkman"/> -->
+<!-- 		</set> -->
 		
 	</class>
 	

@@ -23,7 +23,7 @@
 			class	属性的全路径
 			column	外键的字段
 		-->
-		<many-to-one name="customer" class="com.itheima.domain.Customer" column="lkm_cust_id"/>
+<!-- 		<many-to-one name="customer" class="com.itheima.domain.Customer" column="lkm_cust_id"/> -->
 	</class>
 </hibernate-mapping>
 
